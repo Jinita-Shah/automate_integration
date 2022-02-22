@@ -60,6 +60,7 @@ public class BrowserStackTestNGTest {
         if (buildName == null) {
             buildName = (String) config.get("build");
         }
+          capabilities.setCapability("build", buildName);
 
         if (capabilities.getCapability("browserstack.local") != null
                 && capabilities.getCapability("browserstack.local") == "true") {
